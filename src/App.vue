@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
-import { onMounted, computed } from "vue";
-import { useWeatherStore } from "@/store";
+import {computed, onMounted} from "vue";
+import {useWeatherStore} from "@/store";
 
 import CurrentDay from "@/components/CurrentDay.vue";
 import ForecastDays from "@/components/ForecastDays.vue";
@@ -12,8 +12,8 @@ const getForecastDays = computed(() => {
 });
 
 const store = useWeatherStore();
-onMounted( async () => {
-    await store.fetchWeather();
+onMounted(() => {
+  store.fetchWeather();
 });
 
 </script>
